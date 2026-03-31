@@ -34,6 +34,7 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = "v1.10.1" },
 	{ src = "https://github.com/folke/flash.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/chomosuke/typst-preview.nvim", version = "v1.4.2" },
 })
 
 -------------------------------------------------------------------------- theme
@@ -236,3 +237,7 @@ conform.setup({
 
 Map({ "n", "v" }, "<leader>mp", format_and_report)
 -------------------------------------------------------------------------- conform-end
+
+-------------------------------------------------------------------------- typst-preview
+require("typst-preview").setup()
+-------------------------------------------------------------------------- typst-preview-end
