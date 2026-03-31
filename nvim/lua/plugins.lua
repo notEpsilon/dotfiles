@@ -40,6 +40,7 @@ vim.pack.add({
 vim.o.background = "dark"
 require("gruvbox").setup({
 	contrast = "hard",
+	transparent_mode = true,
 })
 vim.cmd([[colorscheme gruvbox]])
 -------------------------------------------------------------------------- theme-end
