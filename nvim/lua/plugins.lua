@@ -23,6 +23,7 @@ require("util")
 
 vim.pack.add({
 	{ src = "https://github.com/ellisonleao/gruvbox.nvim" },
+	{ src = "https://github.com/olivercederborg/poimandres.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
@@ -35,6 +36,8 @@ vim.pack.add({
 	{ src = "https://github.com/folke/flash.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/chomosuke/typst-preview.nvim", version = "v1.4.2" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 })
 
 -------------------------------------------------------------------------- theme
@@ -44,6 +47,8 @@ require("gruvbox").setup({
 	transparent_mode = true,
 })
 vim.cmd([[colorscheme gruvbox]])
+-- require("poimandres").setup({})
+-- vim.cmd([[colorscheme poimandres]])
 -------------------------------------------------------------------------- theme-end
 
 -------------------------------------------------------------------------- mini
@@ -241,3 +246,7 @@ Map({ "n", "v" }, "<leader>mp", format_and_report)
 -------------------------------------------------------------------------- typst-preview
 require("typst-preview").setup()
 -------------------------------------------------------------------------- typst-preview-end
+
+-------------------------------------------------------------------------- gitsigns
+require("gitsigns").setup()
+-------------------------------------------------------------------------- gitsigns-end
