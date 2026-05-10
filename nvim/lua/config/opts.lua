@@ -7,7 +7,7 @@ vim.o.cursorline = true
 vim.o.wrap = false
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 8
-vim.o.cursorcolumn = true
+-- vim.o.cursorcolumn = true
 
 -- Indentation
 vim.o.tabstop = 2
