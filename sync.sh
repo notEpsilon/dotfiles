@@ -10,3 +10,6 @@ cp -r ./alacritty ~/.config
 
 rm -rf ~/.config/tmux
 cp -r ./tmux ~/.config
+
+rm -rf ~/.config/wezterm
+cp -r ./wezterm ~/.config

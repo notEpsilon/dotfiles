@@ -3,12 +3,12 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			require("gruvbox").setup({
-				contrast = "hard",
-				transparent_mode = true,
-			})
+			-- require("gruvbox").setup({
+			-- 	contrast = "hard",
+			-- 	-- transparent_mode = true,
+			-- })
 
-			vim.cmd.colorscheme("gruvbox")
+			-- vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 	{
@@ -18,6 +18,18 @@ return {
 		config = function()
 			-- require("koda").setup({ transparent = true })
 			-- vim.cmd.colorscheme("koda")
+		end,
+	},
+	{
+		"scottmckendry/cyberdream.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("cyberdream").setup({
+				transparent = true,
+			})
+
+			vim.cmd.colorscheme("cyberdream")
 		end,
 	},
 }
