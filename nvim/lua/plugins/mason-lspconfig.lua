@@ -7,4 +7,5 @@ return {
       "neovim/nvim-lspconfig",
     },
   },
-};
+}
+

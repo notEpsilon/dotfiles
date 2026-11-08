@@ -1,15 +1,10 @@
-local vim = vim
-
--- Basics
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.wrap = false
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 8
--- vim.o.cursorcolumn = true
 
--- Indentation
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.softtabstop = 2
@@ -17,14 +12,12 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
 
--- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
+vim.o.inccommand = 'split'
 
--- Visual
--- vim.o.termguicolors = true
 vim.o.signcolumn = "yes"
 vim.o.colorcolumn = "100"
 vim.o.showmatch = true
@@ -35,30 +28,26 @@ vim.o.showmode = false
 vim.o.winborder = "rounded"
 vim.o.background = "dark"
 
--- Files
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
 vim.o.undofile = true
 vim.o.undodir = vim.fn.expand("~/.vim/undodir")
-vim.o.updatetime = 300
-vim.o.timeoutlen = 500
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
 vim.o.ttimeoutlen = 0
 vim.o.autoread = true
 vim.o.autowrite = false
 
--- Behavior
 vim.o.hidden = true
 vim.o.errorbells = false
 vim.o.backspace = "indent,eol,start"
 vim.o.autochdir = false
 vim.o.selection = "inclusive"
 vim.o.mouse = "a"
--- vim.opt.path:append("**")
-vim.opt.clipboard:append("unnamedplus")
+vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 vim.o.modifiable = true
 
--- Cursor
 vim.o.guicursor = ""
 
 -- Autocmds
@@ -104,12 +93,5 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	group = augroup,
-	pattern = { "markdown", "text", "gitcommit" },
-	callback = function()
-		vim.opt_local.wrap = true
-		vim.opt_local.linebreak = true
-		vim.opt_local.spell = true
-	end,
-})
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+

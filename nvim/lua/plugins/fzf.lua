@@ -20,4 +20,4 @@ return {
       Map("n", "<leader>fg", require("fzf-lua").live_grep)
     end,
   },
-};
+}
